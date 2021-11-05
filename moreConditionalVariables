@@ -1,0 +1,14 @@
+#!/bin/bash
+
+read SCA
+read EQU
+read ISO
+
+if [[ "$SCA" == "$EQU" && "$SCA" == "$ISO" ]]; then
+    echo 'EQUILATERAL'
+elif
+    [[ "$SCA" == "$EQU" || "$SCA" == "$ISO" || "$ISO" == "$EQU" ]]; then
+    echo 'ISOCELE'
+else
+    echo 'SCALENE'
+fi
